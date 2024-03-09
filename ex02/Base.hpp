@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jadithya <jadithya@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 20:14:28 by jadithya          #+#    #+#             */
-/*   Updated: 2024/03/09 13:55:56 by jadithya         ###   ########.fr       */
+/*   Created: 2024/03/09 14:58:52 by jadithya          #+#    #+#             */
+/*   Updated: 2024/03/09 15:08:56 by jadithya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ScalarConverter.hpp"
+#ifndef BASE_HPP
+# define BASE_HPP
 
-int main(int ac, char **av) {
-	for (int i = 1; i < ac; i++) {
-		ScalarConverter::convert(av[i]);
-		std::cout << std::endl;
-	}
-}
+# include <iostream>
+
+class Base {
+	public:
+		virtual ~Base();
+};
+
+#endif

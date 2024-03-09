@@ -6,7 +6,7 @@
 /*   By: jadithya <jadithya@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 18:52:38 by jadithya          #+#    #+#             */
-/*   Updated: 2024/03/06 23:49:02 by jadithya         ###   ########.fr       */
+/*   Updated: 2024/03/09 13:54:28 by jadithya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 ScalarConverter::ScalarConverter() {
 	std::cout << "Constructor called" << std::endl;
-}
-
-ScalarConverter::~ScalarConverter() {
-	std::cout << "Destructor called" << std::endl;
 }
 
 ScalarConverter::ScalarConverter(ScalarConverter &s) {

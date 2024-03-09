@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   C.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jadithya <jadithya@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 20:14:28 by jadithya          #+#    #+#             */
-/*   Updated: 2024/03/09 13:55:56 by jadithya         ###   ########.fr       */
+/*   Created: 2024/03/09 15:05:40 by jadithya          #+#    #+#             */
+/*   Updated: 2024/03/09 15:06:34 by jadithya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ScalarConverter.hpp"
+#ifndef C_HPP
+# define C_HPP
 
-int main(int ac, char **av) {
-	for (int i = 1; i < ac; i++) {
-		ScalarConverter::convert(av[i]);
-		std::cout << std::endl;
-	}
-}
+# include "Base.hpp"
+
+class C : public Base {
+};
+
+#endif

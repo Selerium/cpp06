@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jadithya <jadithya@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/05 20:14:28 by jadithya          #+#    #+#             */
-/*   Updated: 2024/03/09 13:55:56 by jadithya         ###   ########.fr       */
+/*   Created: 2024/03/06 23:54:19 by jadithya          #+#    #+#             */
+/*   Updated: 2024/03/09 14:35:40 by jadithya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ScalarConverter.hpp"
+#ifndef SERIALIZER_HPP
+# define SERIALIZER_HPP
 
-int main(int ac, char **av) {
-	for (int i = 1; i < ac; i++) {
-		ScalarConverter::convert(av[i]);
-		std::cout << std::endl;
-	}
-}
+# include<iostream>
+# include<string>
+# include<cstdlib>
+# include<climits>
+# include<stdint.h>
+# include"Data.hpp"
+
+class Serializer {
+	public:
+		Serializer();
+		virtual ~Serializer() = 0;
+		Serializer(Serializer &s);
+		Serializer &operator = (Serializer &s);
+
+		static uintptr_t serialize (Data *ptr);
+		static Data *deserialize(uintptr_t raw);
+};
+
+#endif
