@@ -6,7 +6,7 @@
 /*   By: jadithya <jadithya@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/04 18:52:38 by jadithya          #+#    #+#             */
-/*   Updated: 2024/03/09 13:54:28 by jadithya         ###   ########.fr       */
+/*   Updated: 2024/03/31 17:55:16 by jadithya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,21 @@ void ScalarConverter::convert(std::string input) {
 	bool flag = false;
 
 	try {
+		std::cout << input << std::endl;
+		if (!input.compare("nan") || !input.compare("-inf") || !input.compare("+inf") || !input.compare("inf")) {
+			std::cout << "char: impossible"
+				<< std::endl << "int: impossible"
+				<< std::endl << "float: " << input << "f"
+				<< std::endl << "double: " << input;
+			return ;
+		}
+		if (!input.compare("inff") || !input.compare("+inff") || !input.compare("-inff")) {
+			std::cout << "char: impossible"
+				<< std::endl << "int: impossible"
+				<< std::endl << "float: " << input
+				<< std::endl << "double: " << input.substr(0, input.length() - 1);
+			return ;
+		}
 		// validation of input:
 		if (input == "-2147483649" || input == "2147483648")
 			throw std::exception();
